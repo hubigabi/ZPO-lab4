@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerMain">
+    <children>
+        <Label layoutX="110.0" layoutY="22.0" prefHeight="38.0" prefWidth="91.0" text="Class name" />
+        <Button fx:id="buttonCheck" layoutX="443.0" layoutY="28.0" mnemonicParsing="false" onAction="#buttonCheckOnAction" text="Check" />
+        <TextField fx:id="textFieldSetValue" layoutX="395.0" layoutY="162.0" prefHeight="31.0" prefWidth="172.0" />
+        <TableView fx:id="tableView" layoutX="25.0" layoutY="106.0" prefHeight="270.0" prefWidth="350.0">
+            <columns>
+                <TableColumn fx:id="tableColumnNo" prefWidth="50.0" text="No." />
+                <TableColumn fx:id="tableColumnGetter" prefWidth="200.0" text="Getter" />
+                <TableColumn fx:id="tableColumnValue" prefWidth="100.0" text="Value" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="comboBoxSetters" layoutX="396.0" layoutY="114.0" prefHeight="31.0" prefWidth="274.0" />
+        <TextField fx:id="textFieldClassName" layoutX="226.0" layoutY="28.0" />
+        <ComboBox fx:id="comboBoxInvoke" layoutX="397.0" layoutY="241.0" prefHeight="31.0" prefWidth="274.0" />
+        <Button fx:id="buttonInvoke" layoutX="397.0" layoutY="292.0" mnemonicParsing="false" onAction="#buttonInvokeMethodOnAction" text="Invoke method" />
+        <Button fx:id="buttonSetValue" layoutX="590.0" layoutY="162.0" mnemonicParsing="false" onAction="#buttonSetValueOnAction" text="Set value" />
+        <Label fx:id="labelTime" alignment="CENTER" layoutX="395.0" layoutY="344.0" prefHeight="58.0" prefWidth="274.0" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+    </children>
+</AnchorPane>
