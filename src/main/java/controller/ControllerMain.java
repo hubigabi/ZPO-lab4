@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import model.ColorEnum;
 import model.TableData;
 import org.apache.commons.lang3.ClassUtils;
 
@@ -200,7 +201,7 @@ public class ControllerMain {
             } else if (parameterType.equals(Date.class)) {
                 method.invoke(objectCreated, new Date(Long.parseLong(textFieldSetValue.getText())));
             } else if (parameterType.equals(Enum.class)) {
-                method.invoke(objectCreated, Enum.valueOf((Class<Enum>) parameterType, textFieldSetValue.getText()));
+                method.invoke(objectCreated, Enum.valueOf(ColorEnum.class, textFieldSetValue.getText()));
             } else {
                 Alert errorAlert = new Alert(Alert.AlertType.ERROR);
                 errorAlert.setHeaderText("Wrong parameter");

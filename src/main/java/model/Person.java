@@ -11,7 +11,7 @@ public class Person {
     private long fieldLong;
     private float fieldFloat;
     private double fieldDouble;
-    private boolean fieldBoolena;
+    private boolean fieldBoolean;
     private char fieldChar;
     private Date fieldDate;
     private Enum<ColorEnum> fieldEnum;
@@ -72,12 +72,12 @@ public class Person {
         this.fieldDouble = fieldDouble;
     }
 
-    public boolean isFieldBoolena() {
-        return fieldBoolena;
+    public boolean isFieldBoolean() {
+        return fieldBoolean;
     }
 
-    public void setFieldBoolena(boolean fieldBoolena) {
-        this.fieldBoolena = fieldBoolena;
+    public void setFieldBoolean(boolean fieldBoolean) {
+        this.fieldBoolean = fieldBoolean;
     }
 
     public char getFieldChar() {
@@ -107,7 +107,7 @@ public class Person {
     public Person() {
     }
 
-    public Person(String fieldString, int fieldInt, byte fieldByte, short fieldShort, long fieldLong, float fieldFloat, double fieldDouble, boolean fieldBoolena, char fieldChar, Date fieldDte, Enum<ColorEnum> fieldEnum) {
+    public Person(String fieldString, int fieldInt, byte fieldByte, short fieldShort, long fieldLong, float fieldFloat, double fieldDouble, boolean fieldBoolean, char fieldChar, Date fieldDate, Enum<ColorEnum> fieldEnum) {
         this.fieldString = fieldString;
         this.fieldInt = fieldInt;
         this.fieldByte = fieldByte;
@@ -115,7 +115,7 @@ public class Person {
         this.fieldLong = fieldLong;
         this.fieldFloat = fieldFloat;
         this.fieldDouble = fieldDouble;
-        this.fieldBoolena = fieldBoolena;
+        this.fieldBoolean = fieldBoolean;
         this.fieldChar = fieldChar;
         this.fieldDate = fieldDate;
         this.fieldEnum = fieldEnum;
@@ -131,7 +131,7 @@ public class Person {
                 ", fieldLong=" + fieldLong +
                 ", fieldFloat=" + fieldFloat +
                 ", fieldDouble=" + fieldDouble +
-                ", fieldBoolena=" + fieldBoolena +
+                ", fieldBoolean=" + fieldBoolean +
                 ", fieldChar=" + fieldChar +
                 ", fieldDte=" + fieldDate +
                 ", fieldEnum=" + fieldEnum +
