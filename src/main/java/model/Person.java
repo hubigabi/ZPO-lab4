@@ -14,7 +14,7 @@ public class Person {
     private boolean fieldBoolean;
     private char fieldChar;
     private Date fieldDate;
-    private Enum<ColorEnum> fieldEnum;
+    private ColorEnum fieldEnum;
 
     public String getFieldString() {
         return fieldString;
@@ -100,14 +100,14 @@ public class Person {
         return fieldEnum;
     }
 
-    public void setFieldEnum(Enum<ColorEnum> fieldEnum) {
+    public void setFieldEnum(ColorEnum fieldEnum) {
         this.fieldEnum = fieldEnum;
     }
 
     public Person() {
     }
 
-    public Person(String fieldString, int fieldInt, byte fieldByte, short fieldShort, long fieldLong, float fieldFloat, double fieldDouble, boolean fieldBoolean, char fieldChar, Date fieldDate, Enum<ColorEnum> fieldEnum) {
+    public Person(String fieldString, int fieldInt, byte fieldByte, short fieldShort, long fieldLong, float fieldFloat, double fieldDouble, boolean fieldBoolean, char fieldChar, Date fieldDate, ColorEnum fieldEnum) {
         this.fieldString = fieldString;
         this.fieldInt = fieldInt;
         this.fieldByte = fieldByte;

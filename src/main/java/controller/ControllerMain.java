@@ -91,7 +91,7 @@ public class ControllerMain {
                         method.getParameterTypes())
                         .allMatch(parameter ->
                                 ClassUtils.isPrimitiveOrWrapper(parameter) || parameter.equals(Date.class)
-                                        || parameter.equals(Enum.class) || parameter.equals(String.class)))
+                                        || parameter.equals(Enum.class) || parameter.isEnum()))
                 .forEach((method) -> {
                     method.setAccessible(true);
                     setttersMethods.add(method);
@@ -200,8 +200,8 @@ public class ControllerMain {
                 method.invoke(objectCreated, textFieldSetValue.getText());
             } else if (parameterType.equals(Date.class)) {
                 method.invoke(objectCreated, new Date(Long.parseLong(textFieldSetValue.getText())));
-            } else if (parameterType.equals(Enum.class)) {
-                method.invoke(objectCreated, Enum.valueOf(ColorEnum.class, textFieldSetValue.getText()));
+            } else if (parameterType.isEnum()) {
+                method.invoke(objectCreated, Enum.valueOf((Class<Enum>) parameterType, textFieldSetValue.getText()));
             } else {
                 Alert errorAlert = new Alert(Alert.AlertType.ERROR);
                 errorAlert.setHeaderText("Wrong parameter");
@@ -211,7 +211,6 @@ public class ControllerMain {
 
             long endTime = System.nanoTime();
             labelTime.setText("Time to set a new value:\n" + (endTime - startTime) / 1000 + "ms");
-
 
             try {
                 Class<?> classCreated = Class.forName(textFieldClassName.getText());
